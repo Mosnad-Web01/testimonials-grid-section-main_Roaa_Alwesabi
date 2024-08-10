@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.testimonials {
+    display: grid;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "daniel jonathan kira"
+        "jeanette patrick kira";
+    padding: 20px;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.testimonial h3 {
+    margin-top: 0;
+    font-size: 1.25em;
+}
+
+.testimonial span {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.testimonial .quote {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.testimonial .details {
+    color: #444;
+    font-size: 0.9em;
+    margin-bottom: 0;
+}
+
+.daniel {
+    background-color: #6241c7; 
+    color: white;
+    grid-column: span 2; 
+}
+
+.jonathan {
+    background-color: #48556a; 
+    color: white;
+}
+
+.jeanette {
+    background-color: #ffffff; 
+    color: #48556a; 
+    grid-row: span 2;
+}
+
+.patrick {
+    background-color: #19212e; 
+    color: white;
+}
+
+.kira {
+    background-color: #f7f9fe; 
+    color: #48556a; 
+    grid-column: span 2; 
+}
+
+@media screen and (max-width: 768px) {
+    .testimonials {
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr;
+    }
+}
